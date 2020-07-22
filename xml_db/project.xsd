@@ -1,0 +1,198 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="dirData" type="dirType">
+        <xs:key name="wareId">
+            <xs:selector xpath = "Warehouse"/>
+            <xs:field xpath = "wareId"/>
+        </xs:key>
+        
+        <xs:key name="storeId">
+            <xs:selector xpath = "Store"/>
+            <xs:field xpath = "storeId"/>
+        </xs:key>
+
+        <xs:key name="itemId">
+            <xs:selector xpath = "Item"/>
+            <xs:field xpath = "itemId"/>
+        </xs:key>
+
+        <xs:key name="shipId">
+            <xs:selector xpath = "ShippingLoc"/>
+            <xs:field xpath = "shipId"/>
+        </xs:key>
+
+        <xs:key name="typeId">
+            <xs:selector xpath = "Type"/>
+            <xs:field xpath = "typeId"/>
+        </xs:key>
+
+        <xs:keyref name="ItemStore_storeFkey" refer="storeId">
+            <xs:selector xpath="ItemStore"/>
+            <xs:field xpath="storeId"/>
+        </xs:keyref>
+        <xs:keyref name="ItemStore_itemFkey" refer="itemId">
+            <xs:selector xpath="ItemStore"/>
+            <xs:field xpath="itemId"/>
+        </xs:keyref>
+
+        <xs:keyref name="ItemWarehouse_wareFkey" refer="wareId">
+            <xs:selector xpath="ItemWarehouse"/>
+            <xs:field xpath="wareId"/>
+        </xs:keyref>
+        <xs:keyref name="ItemWarehouse_storeFkey" refer="itemId">
+            <xs:selector xpath="ItemWarehouse"/>
+            <xs:field xpath="itemId"/>
+        </xs:keyref>
+
+        <xs:keyref name="WarehouseShippingLoc_wareFkey" refer="wareId">
+            <xs:selector xpath="WarehouseShippingLoc"/>
+            <xs:field xpath="wareId"/>
+        </xs:keyref>
+        <xs:keyref name="WarehouseShippingLoc_shipFkey" refer="shipId">
+            <xs:selector xpath="WarehouseShippingLoc"/>
+            <xs:field xpath="shipId"/>
+        </xs:keyref>
+
+        <xs:keyref name="ItemType_itemFkey" refer="itemId">
+            <xs:selector xpath="ItemType"/>
+            <xs:field xpath="itemId"/>
+        </xs:keyref>
+        <xs:keyref name="ItemType_typeFkey" refer="typeId">
+            <xs:selector xpath="ItemType"/>
+            <xs:field xpath="typeId"/>
+        </xs:keyref>
+
+    </xs:element>
+        
+    <xs:complexType name = "dirType">
+        <xs:sequence>
+            <xs:element ref="Company" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="Warehouse" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="ShippingLoc" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="WarehouseShippingLoc" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="Item" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="Type" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="ItemType" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="Vehicle" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="Store" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="ItemStore" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="ItemWarehouse" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+        
+        <xs:element name="Company">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="compId" type="xs:integer"/>
+                    <xs:element name="Name" type="xs:string"/>
+                    <xs:element name="Country" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+
+        <xs:element name="Warehouse">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="wareId" type="xs:integer"/>
+                    <xs:element name="Name" type="xs:string"/>
+                    <xs:element name="Location" type="xs:string"/>
+                    <xs:element name="Owner" type="xs:string"/>
+                    <xs:element name="Size" type="xs:decimal"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+
+        <xs:element name="ShippingLoc">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="shipId" type="xs:integer"/>
+                    <xs:element name="Name" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+
+        <xs:element name="WarehouseShippingLoc">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="wareshipId" type="xs:integer"/>
+                    <xs:element name="wareId" type="xs:integer"/>
+                    <xs:element name="shipId" type="xs:integer"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+
+        <xs:element name="Item">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="itemId" type="xs:integer"/>
+                    <xs:element name="Name" type="xs:string"/>
+                    <xs:element name="Cost" type="xs:decimal"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+
+        <xs:element name="Type">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="typeId" type="xs:integer"/>
+                    <xs:element name="Name" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+
+        <xs:element name="ItemType">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="itemtypeId" type="xs:integer"/>
+                    <xs:element name="itemId" type="xs:integer"/>
+                    <xs:element name="typeId" type="xs:integer"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+
+        <xs:element name="Vehicle">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="vehcId" type="xs:integer"/>
+                    <xs:element name="PlateNum" type="xs:string"/>
+                    <xs:element name="Owner" type="xs:string"/>
+                    <xs:element name="ActiveLife" type="xs:decimal"/>
+                    <xs:element name="Type" type="xs:string"/>
+                    <xs:element name="Capacity" type="xs:decimal"/>
+                    <xs:element name="Manufacturer" type="xs:string"/>
+                    <xs:element name="Model" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+
+        <xs:element name="Store">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="storeId" type="xs:integer"/>
+                    <xs:element name="Owner" type="xs:string"/>
+                    <xs:element name="Name" type="xs:string"/>
+                    <xs:element name="Location" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+
+        <xs:element name="ItemStore">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="itemstoreId" type="xs:integer"/>
+                    <xs:element name="itemId" type="xs:integer"/>
+                    <xs:element name="storeId" type="xs:integer"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+
+        <xs:element name="ItemWarehouse">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="itemwarehouseId" type="xs:integer"/>
+                    <xs:element name="itemId" type="xs:integer"/>
+                    <xs:element name="wareId" type="xs:integer"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+
+</xs:schema>

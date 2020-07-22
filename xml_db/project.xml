@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dirData>
+
+    <Company>
+        <compId>1</compId>
+        <Name>Tru Kids, Inc</Name>
+        <Country>US</Country>
+    </Company>
+
+    <Company>
+        <compId>2</compId>
+        <Name>Walmart</Name>
+        <Country>US</Country>
+    </Company>
+
+    <Company>
+        <compId>3</compId>
+        <Name>McDonalds Co</Name>
+        <Country>US</Country>
+    </Company>
+
+    <Company>
+        <compId>4</compId>
+        <Name>Jeans Company</Name>
+        <Country>ENG</Country>
+    </Company>
+
+    <Company>
+        <compId>5</compId>
+        <Name>Storage Company</Name>
+        <Country>AUS</Country>
+    </Company>
+
+
+    <Warehouse>
+        <wareId>1</wareId>
+        <Name>warehouse1</Name>
+        <Location>New York City</Location>
+        <Owner>Tru Kids, Inc</Owner>
+        <Size>200000</Size>
+    </Warehouse>
+
+    <Warehouse>
+        <wareId>2</wareId>
+        <Name>warehouse2</Name>
+        <Location>Toronto</Location>
+        <Owner>Storage Company</Owner>
+        <Size>11000</Size>
+    </Warehouse>
+
+    <Warehouse>
+        <wareId>3</wareId>
+        <Name>warehouse3</Name>
+        <Location>Mississauga</Location>
+        <Owner>Storage Company</Owner>
+        <Size>50000</Size>
+    </Warehouse>
+
+    <Warehouse>
+        <wareId>4</wareId>
+        <Name>warehouse4</Name>
+        <Location>Montreal</Location>
+        <Owner>Storage Company</Owner>
+        <Size>9000</Size>
+    </Warehouse>
+
+    <Warehouse>
+        <wareId>5</wareId>
+        <Name>warehouse5</Name>
+        <Location>Toronto</Location>
+        <Owner>Storage Company</Owner>
+        <Size>28000</Size>
+    </Warehouse>
+
+
+    <ShippingLoc>
+        <shipId>1</shipId>
+        <Name>Toronto</Name>
+    </ShippingLoc>
+
+    <ShippingLoc>
+        <shipId>2</shipId>
+        <Name>Mississauga</Name>
+    </ShippingLoc>
+
+    <ShippingLoc>
+        <shipId>3</shipId>
+        <Name>New York City</Name>
+    </ShippingLoc>
+
+    <ShippingLoc>
+        <shipId>4</shipId>
+        <Name>Montreal</Name>
+    </ShippingLoc>
+    
+    <ShippingLoc>
+        <shipId>5</shipId>
+        <Name>Kitchener</Name>
+    </ShippingLoc>
+
+
+    <WarehouseShippingLoc>
+        <wareshipId>1</wareshipId>
+        <wareId>1</wareId>
+        <shipId>3</shipId>
+    </WarehouseShippingLoc>
+
+    <WarehouseShippingLoc>
+        <wareshipId>2</wareshipId>
+        <wareId>2</wareId>
+        <shipId>1</shipId>
+    </WarehouseShippingLoc>
+
+    <WarehouseShippingLoc>
+        <wareshipId>3</wareshipId>
+        <wareId>3</wareId>
+        <shipId>2</shipId>
+    </WarehouseShippingLoc>
+
+    <WarehouseShippingLoc>
+        <wareshipId>4</wareshipId>
+        <wareId>4</wareId>
+        <shipId>4</shipId>
+    </WarehouseShippingLoc>
+
+    <WarehouseShippingLoc>
+        <wareshipId>5</wareshipId>
+        <wareId>5</wareId>
+        <shipId>1</shipId>
+    </WarehouseShippingLoc>
+
+
+    <Item>
+        <itemId>1</itemId>
+        <Name>bicycle</Name>
+        <Cost>200</Cost>
+    </Item>
+
+    <Item>
+        <itemId>2</itemId>
+        <Name>jeans</Name>
+        <Cost>40</Cost>
+    </Item>
+
+    <Item>
+        <itemId>3</itemId>
+        <Name>lego</Name>
+        <Cost>15</Cost>
+    </Item>
+
+    <Item>
+        <itemId>4</itemId>
+        <Name>burger</Name>
+        <Cost>4</Cost>
+    </Item>
+
+    <Item>
+        <itemId>5</itemId>
+        <Name>dictionary</Name>
+        <Cost>10</Cost>
+    </Item>
+
+
+    <Type>
+        <typeId>1</typeId>
+        <Name>Children</Name>
+    </Type>
+
+    <Type>
+        <typeId>2</typeId>
+        <Name>Food</Name>
+    </Type>
+
+    <Type>
+        <typeId>3</typeId>
+        <Name>Entertainment</Name>
+    </Type>
+
+    <Type>
+        <typeId>4</typeId>
+        <Name>Clothing</Name>
+    </Type>
+
+    <Type>
+        <typeId>5</typeId>
+        <Name>Education</Name>
+    </Type>
+
+
+    <ItemType>
+        <itemtypeId>1</itemtypeId>
+        <itemId>1</itemId>
+        <typeId>3</typeId>
+    </ItemType>
+
+    <ItemType>
+        <itemtypeId>2</itemtypeId>
+        <itemId>2</itemId>
+        <typeId>4</typeId>
+    </ItemType>
+
+    <ItemType>
+        <itemtypeId>3</itemtypeId>
+        <itemId>3</itemId>
+        <typeId>3</typeId>
+    </ItemType>
+
+    <ItemType>
+        <itemtypeId>4</itemtypeId>
+        <itemId>4</itemId>
+        <typeId>2</typeId>
+    </ItemType>
+
+    <ItemType>
+        <itemtypeId>5</itemtypeId>
+        <itemId>5</itemId>
+        <typeId>5</typeId>
+    </ItemType>
+
+    <Vehicle>
+        <vehcId>1</vehcId>
+        <PlateNum>5TGY606</PlateNum>
+        <Owner>Walmart</Owner>
+        <ActiveLife>3</ActiveLife>
+        <Type>Truck</Type>
+        <Capacity>300</Capacity>
+        <Manufacturer>Ford</Manufacturer>
+        <Model>FAST10</Model>
+    </Vehicle>
+
+    <Vehicle>
+        <vehcId>2</vehcId>
+        <PlateNum>3SKN889</PlateNum>
+        <Owner>Tru Kids, Co</Owner>
+        <ActiveLife>2</ActiveLife>
+        <Type>Truck</Type>
+        <Capacity>300</Capacity>
+        <Manufacturer>Ford</Manufacturer>
+        <Model>FAST10</Model>
+    </Vehicle>
+
+    <Vehicle>
+        <vehcId>3</vehcId>
+        <PlateNum>DAN6346</PlateNum>
+        <Owner>McDonalds Co</Owner>
+        <ActiveLife>0</ActiveLife>
+        <Type>Plane</Type>
+        <Capacity>300</Capacity>
+        <Manufacturer>Ford</Manufacturer>
+        <Model>FAST10</Model>
+    </Vehicle>
+
+    <Vehicle>
+        <vehcId>4</vehcId>
+        <PlateNum>149BVW</PlateNum>
+        <Owner>McDonalds</Owner>
+        <ActiveLife>6</ActiveLife>
+        <Type>Truck</Type>
+        <Capacity>300</Capacity>
+        <Manufacturer>Ford</Manufacturer>
+        <Model>FAST10</Model>
+    </Vehicle>
+
+    <Vehicle>
+        <vehcId>5</vehcId>
+        <PlateNum>AGE5055</PlateNum>
+        <Owner>Walmart</Owner>
+        <ActiveLife>1</ActiveLife>
+        <Type>Train</Type>
+        <Capacity>300</Capacity>
+        <Manufacturer>Ford</Manufacturer>
+        <Model>FAST10</Model>
+    </Vehicle>
+
+
+    <Store>
+        <storeId>1</storeId>
+        <Owner>Walmart</Owner>
+        <Name>Walmart</Name>
+        <Location>Toronto</Location>
+    </Store>
+
+    <Store>
+        <storeId>2</storeId>
+        <Owner>Walmart</Owner>
+        <Name>Walmart</Name>
+        <Location>Mississauga</Location>
+    </Store>
+
+    <Store>
+        <storeId>3</storeId>
+        <Owner>Zellers</Owner>
+        <Name>Hudsons Bay</Name>
+        <Location>New York City</Location>
+    </Store>
+
+    <Store>
+        <storeId>4</storeId>
+        <Owner>McDonalds Co</Owner>
+        <Name>McDonalds</Name>
+        <Location>Toronto</Location>
+    </Store>
+
+    <Store>
+        <storeId>5</storeId>
+        <Owner>Tru Kids, Inc</Owner>
+        <Name>ToysRUs</Name>
+        <Location>Montreal</Location>
+    </Store>
+
+
+    <ItemStore>
+        <itemstoreId>1</itemstoreId>
+        <itemId>1</itemId>
+        <storeId>3</storeId>
+    </ItemStore>
+
+    <ItemStore>
+        <itemstoreId>2</itemstoreId>
+        <itemId>2</itemId>
+        <storeId>2</storeId>
+    </ItemStore>
+
+    <ItemStore>
+        <itemstoreId>3</itemstoreId>
+        <itemId>3</itemId>
+        <storeId>5</storeId>
+    </ItemStore>
+
+    <ItemStore>
+        <itemstoreId>4</itemstoreId>
+        <itemId>4</itemId>
+        <storeId>4</storeId>
+    </ItemStore>
+
+    <ItemStore>
+        <itemstoreId>5</itemstoreId>
+        <itemId>5</itemId>
+        <storeId>2</storeId>
+    </ItemStore>
+
+
+    <ItemWarehouse>
+        <itemwarehouseId>1</itemwarehouseId>
+        <itemId>1</itemId>
+        <wareId>2</wareId>
+    </ItemWarehouse>
+
+    <ItemWarehouse>
+        <itemwarehouseId>2</itemwarehouseId>
+        <itemId>2</itemId>
+        <wareId>3</wareId>
+    </ItemWarehouse>
+
+    <ItemWarehouse>
+        <itemwarehouseId>3</itemwarehouseId>
+        <itemId>3</itemId>
+        <wareId>1</wareId>
+    </ItemWarehouse>
+
+    <ItemWarehouse>
+        <itemwarehouseId>4</itemwarehouseId>
+        <itemId>4</itemId>
+        <wareId>3</wareId>
+    </ItemWarehouse>
+
+    <ItemWarehouse>
+        <itemwarehouseId>5</itemwarehouseId>
+        <itemId>5</itemId>
+        <wareId>5</wareId>
+    </ItemWarehouse>
+</dirData>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" 
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+    <xsl:template match="/">
+        <html>
+            <body>
+                <!-- Query 1 -->
+                <h2>Q1 Items in database</h2>
+                <table border="1">
+                    <tr bgcolor="#9acd32">
+                        <th>Item</th>
+                    </tr>
+                    <xsl:for-each select="dirData/Item">
+                        <tr>
+                            <td><xsl:value-of select="Name"/></td>
+                        </tr>
+                    </xsl:for-each>
+                </table>
+
+                <!-- Query 2 -->
+                <h2>Q2 Stores In Toronto</h2>
+                <table border="1">
+                    <tr bgcolor="#9acd32">
+                        <th>Item</th>
+                    </tr>
+                    <xsl:for-each select="dirData/Store[Location='Toronto']">
+                        <tr>
+                            <td><xsl:value-of select="Name"/></td>
+                        </tr>
+                    </xsl:for-each>
+                </table>
+
+                <!-- Query 3 -->
+                <h2>Q3 Warehouses Larger than 20000</h2>
+                <table border="1">
+                    <tr bgcolor="#9acd32">
+                        <th>Item</th>
+                    </tr>
+                    <xsl:for-each select="dirData/Warehouse[Size &gt; 20000]">
+                        <tr>
+                            <td><xsl:value-of select="Name"/></td>
+                        </tr>
+                    </xsl:for-each>
+                </table>
+
+                <!-- Query 4 -->
+                <h2>Q4 Companies Not In US</h2>
+                <table border="1">
+                    <tr bgcolor="#9acd32">
+                        <th>Item</th>
+                    </tr>
+                    <xsl:for-each select="dirData/Company[Country != 'US']">
+                        <tr>
+                            <td><xsl:value-of select="Name"/></td>
+                        </tr>
+                    </xsl:for-each>
+                </table>
+
+                <!-- Query 5 -->
+                <h2>Q5 License Plates of Trucks</h2>
+                <table border="1">
+                    <tr bgcolor="#9acd32">
+                        <th>Item</th>
+                    </tr>
+                    <xsl:for-each select="dirData/Vehicle[Type = 'Truck']">
+                        <tr>
+                            <td><xsl:value-of select="PlateNum"/></td>
+                        </tr>
+                    </xsl:for-each>
+                </table>
+
+
+            </body>
+        </html>
+    </xsl:template>
+</xsl:stylesheet>
